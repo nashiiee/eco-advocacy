@@ -1,0 +1,195 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e9f5f0; /* Light greenish background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden; /* Hide default scrolling */
+}
+
+.app-container {
+  width: 100%;
+  max-width: 500px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: linear-gradient(135deg, #4CAF50 0%, #81C784 100%); /* Gradient header */
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  width: 92%;
+  max-width: 500px;
+  z-index: 1;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 1px; /* Slightly spaced letters */
+}
+
+nav {
+  display: none; /* Hide the nav by default */
+  flex-direction: column;
+  background-color: #4CAF50;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  visibility: hidden;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 15px;
+  border-top: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
+}
+
+nav.show {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+}
+
+#hamburger {
+  display: block;
+  color: white;
+  cursor: pointer;
+  font-size: 28px; /* Bigger hamburger icon */
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 20px; /* Top padding for header and additional padding for content */
+  background-color: #f9f9f9; /* Light gray background for content */
+}
+
+h2 {
+  margin: 10px 0;
+  font-size: 26px;
+  color: #333; /* Dark text for headings */
+  text-align: center;
+}
+
+.challenge {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Smooth scaling */
+}
+
+.challenge:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.challenge-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #2c3e50; /* Darker color for titles */
+}
+
+.progress-bar {
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 20px;
+  width: 100%;
+  margin-bottom: 10px; /* Space below the progress bar */
+}
+
+.progress {
+  background-color: #4CAF50;
+  height: 100%;
+  color: white;
+  text-align: center;
+  line-height: 20px; /* Center text vertically */
+  transition: width 0.5s ease; /* Smooth transition of progress */
+}
+
+.join-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.join-button:hover {
+  background-color: #45a049;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+/* Scrollbar styles */
+.content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background-color: #4CAF50; /* Color of the scrollbar */
+  border-radius: 10px;
+}
+
+.content::-webkit-scrollbar-track {
+  background: #e0e0e0; /* Track background */
+}
+
+.trending-topics {
+  padding: 10px;
+  border-top: 2px solid #4CAF50; /* Top border for styling */
+  max-height: 150px; /* Limit height */
+  overflow-y: auto; /* Enable vertical scroll */
+  margin-top: 15px; /* Space above trending topics */
+}
+
+.trending-topics h2 {
+  margin: 10px 0;
+  font-size: 24px;
+  color: #333; /* Dark text color for better contrast */
+  text-align: center;
+}
+
+.trending-topics ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.trending-topics li {
+  padding: 5px 0;
+  color: #555; /* Dark gray text color */
+  transition: color 0.3s ease; /* Transition for hover effect */
+}
+
+.trending-topics li:hover {
+  color: #4CAF50; /* Change text color on hover */
+}

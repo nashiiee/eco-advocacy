@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-advocacy App</title>
+    <link rel="stylesheet" href="/eco-advocy/cssfiles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">Eco-advocacy</div>
+            <i class="fas fa-bars" id="hamburger"></i>
+            <nav id="nav-menu">
+                <a href="#home">Home</a>
+                <a href="challenges.html">Challenges</a>
+                <a href="educational.html">Educational Resources</a>
+                <a href="profile.html">Profile</a>
+                <a href="notifications.html">Notifications</a>
+            </nav>
+        </header>
+        <div class="content">
+            <div class="post">
+                <div class="user-info">
+                    <img src="/wallpaper2.jpg" alt="Profile Pic" class="profile-pic">
+                    <span class="username">Nash Claracay</span>
+                </div>
+                <div class="post-content">
+                    <input type="text" placeholder="What's on your mind?">
+                    <img src="/eco-advocy/istockphoto-1135253768-612x612.jpg" alt="Post Image" class="post-image">
+                </div>
+                <div class="post-actions">
+                    <button><i class="fas fa-thumbs-up"></i></button>
+                    <button><i class="fas fa-comment"></i></button>
+                    <button><i class="fas fa-share"></i></button>
+                </div>
+            </div>
+            <div class="trending-topics">
+                <h2>Trending Topics</h2>
+                <ul>
+                    <li>Plastic Pollution</li>
+                    <li>Renewable Energy</li>
+                    <li>Climate Change Awareness</li>
+                    <li>Zero Waste Living</li>
+                    <li>Sustainable Fashion</li>
+                    <li>Biodiversity Conservation</li>
+                    <li>Recycling Innovations</li>
+                    <li>Water Conservation</li>
+                    <li>Green Transportation</li>
+                    <li>Eco-friendly Products</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+        const appContainer = document.querySelector('.app-container');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!appContainer.contains(event.target) && !navMenu.contains(event.target)) {
+                navMenu.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>

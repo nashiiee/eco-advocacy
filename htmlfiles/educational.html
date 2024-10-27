@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Resources</title>
+    <link rel="stylesheet" href="/eco-advocy/cssfiles/educational.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">Eco-advocacy</div>
+            <i class="fas fa-bars" id="hamburger"></i>
+            <nav id="nav-menu">
+                <a href="#home">Home</a>
+                <a href="challenges.html">Challenges</a>
+                <a href="educational.html">Educational Resources</a>
+                <a href="profile.html">Profile</a>
+                <a href="notifications.html">Notifications</a>
+            </nav>
+        </header>
+        <div class="content">
+            <h2>Educational Resources</h2>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="resource-category">
+                <h3>Category: Recycling</h3>
+                <div class="resource-item">Article 1: How to Recycle Correctly</div>
+                <div class="resource-item">Video 1: Benefits of Recycling</div>
+            </div>
+            <div class="resource-category">
+                <h3>Category: Climate Action</h3>
+                <div class="resource-item">Infographic: Carbon Footprint Reduction</div>
+                <div class="resource-item">Quiz: Test Your Climate Knowledge</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.getElementById('nav-menu').classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

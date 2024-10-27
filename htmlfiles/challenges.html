@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-advocacy App - Challenges</title>
+    <link rel="stylesheet" href="/eco-advocy/cssfiles/challenges.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">Eco-advocacy</div>
+            <i class="fas fa-bars" id="hamburger"></i>
+            <nav id="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="challenges.html">Challenges</a>
+                <a href="educational.html">Educational Resources</a>
+                <a href="profile.html">Profile</a>
+                <a href="notifications.html">Notifications</a>
+            </nav>
+        </header>
+        <div class="content">
+            <h2>Challenges</h2>
+            <div class="challenge">
+                <div class="challenge-title">Challenge 1: Reduce Plastic Use</div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 70%;">70%</div>
+                </div>
+                <button class="join-button">Join</button>
+            </div>
+            <div class="challenge">
+                <div class="challenge-title">Challenge 2: Recycle Paper</div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 30%;">30%</div>
+                </div>
+                <button class="join-button">Join</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+        const appContainer = document.querySelector('.app-container');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!appContainer.contains(event.target) && !navMenu.contains(event.target)) {
+                navMenu.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>
